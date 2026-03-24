@@ -36,7 +36,7 @@ export default function App() {
               <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-4">
                 <Box className="w-6 h-6 text-[#1890ff]" />
               </div>
-              <h3 className="text-[16px] font-medium text-[#333] mb-6 text-center">请扫描临时存放框开始放入</h3>
+              <h3 className="text-[16px] font-medium text-[#333] mb-6 text-center">请扫描临时框编码开始放入</h3>
               <input
                 type="text"
                 value={tempBoxCodeInput}
@@ -96,9 +96,7 @@ export default function App() {
         {confirmedBoxCode && (
           <div className="bg-[#e6f7ff] border border-[#91d5ff] px-4 py-2.5 rounded-[2px] flex items-center shadow-sm">
             <Box className="w-4 h-4 text-[#1890ff] mr-2" />
-            <span className="text-[#333] text-[14px]">
-              {confirmedBoxCode === '无临时框' ? '当前入库模式：' : '当前临时存放框：'}
-            </span>
+            <span className="text-[#333] text-[14px]">当前临时区域：</span>
             <span className="text-[#1890ff] text-[15px] font-bold tracking-wide">
               {confirmedBoxCode === '无临时框' ? '无临时框' : confirmedBoxCode}
             </span>
