@@ -18,7 +18,7 @@ export default function App() {
   };
 
   const handleLargeItem = () => {
-    setConfirmedBoxCode('大件入库');
+    setConfirmedBoxCode('无临时框');
     setTempBoxCodeInput('');
     setIsModalOpen(false);
     setTimeout(() => {
@@ -51,7 +51,7 @@ export default function App() {
                   onClick={handleLargeItem}
                   className="flex-1 h-[36px] rounded-[2px] text-[14px] transition-colors shadow-sm bg-white border border-[#d9d9d9] text-[#666] hover:text-[#1890ff] hover:border-[#1890ff]"
                 >
-                  大件入库
+                  无临时框
                 </button>
                 <button
                   onClick={handleConfirmBox}
@@ -97,10 +97,10 @@ export default function App() {
           <div className="bg-[#e6f7ff] border border-[#91d5ff] px-4 py-2.5 rounded-[2px] flex items-center shadow-sm">
             <Box className="w-4 h-4 text-[#1890ff] mr-2" />
             <span className="text-[#333] text-[14px]">
-              {confirmedBoxCode === '大件入库' ? '当前入库模式：' : '当前临时存放框：'}
+              {confirmedBoxCode === '无临时框' ? '当前入库模式：' : '当前临时存放框：'}
             </span>
             <span className="text-[#1890ff] text-[15px] font-bold tracking-wide">
-              {confirmedBoxCode === '大件入库' ? '大件入库（无临时框）' : confirmedBoxCode}
+              {confirmedBoxCode === '无临时框' ? '无临时框' : confirmedBoxCode}
             </span>
             <button 
               onClick={() => {
